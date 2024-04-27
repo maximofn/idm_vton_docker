@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  idm_vton:
+    container_name: idm_vton
+    image: maximofn/idm_vton:1.0.1
+    build: .
+    runtime: nvidia
+    network_mode: "host"
+    volumes:
+      - ./hub:/root/.cache/huggingface/hub
+    tty: true
+    stdin_open: true

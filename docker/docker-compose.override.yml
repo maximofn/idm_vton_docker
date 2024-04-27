@@ -1,0 +1,5 @@
+version: "3.8"
+
+services:
+  idm_vton:
+    entrypoint: ["bash", "-c", "python app.py"]
